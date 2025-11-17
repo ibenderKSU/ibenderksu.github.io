@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Quiz Questions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h2>What year did I start listening to Juice WRLD?</h2>
+        <div class="button-container">
+            <button onclick="checkAnswer(1, 2)">2016</button>
+            <button onclick="checkAnswer(1, 2, true)">2018</button>
+            <button onclick="checkAnswer(1, 3)">5040</button>
+            <button onclick="checkAnswer(1, 4)">over 9000</button>
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        <h2>What is my name?</h2>
+        <div class="button-container">
+            <button onclick="checkAnswer(2, 1, true)">Isaac</button>
+            <button onclick="checkAnswer(2, 2)">London</button>
+            <button onclick="checkAnswer(2, 3)">Berlin</button>
+            <button onclick="checkAnswer(2, 4)">Jake</button>
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        <h2>Which of these is a name of the artist presented?</h2>
+        <div class="button-container">
+            <button onclick="checkAnswer(3, 1)">Justin Bieber</button>
+            <button onclick="checkAnswer(3, 2)">Jake Paul</button>
+            <button onclick="checkAnswer(3, 3, true)">Post Malone</button>
+            <button onclick="checkAnswer(3, 4)">Taylor Swift</button>
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        <h2>What 2 colors make up Bryson Tillers album cover?</h2>
+        <div class="button-container">
+            <button onclick="checkAnswer(4,1,true)">Blue</button>
+            <button onclick="checkAnswer(4,2)">Green</button>
+            <button onclick="checkAnswer(4,3)">Orange</button>
+            <button onclick="checkAnswer(4,4,true)">Black</button>
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        <h2>What was your favorite artist if any?</h2>
+        <input type="text" id="textAnswer" placeholder="Type your answer here..." style="width: 80%; padding: 12px; font-size: 16px; border: 2px solid #4CAF50; border-radius: 5px; margin: 10px 0;">
+        <br>
+        <button onclick="submitTextAnswer()" style="margin-top: 10px;">Submit</button>
+    </div>
+
+    <div class="tally">Correct Answers: <span id="score">0</span></div>
+
+    <script>
+        let tally = 0;
+
+        function checkAnswer(questionNum, answerNum, isCorrect = false) {
+            if (isCorrect) {
+                tally++;
+                document.getElementById('score').textContent = tally;
+                alert('Correct!');
+            } else {
+                alert('Incorrect! Try again.');
+            }
+        }
+
+        function submitTextAnswer() {
+            const answer = document.getElementById('textAnswer').value;
+            if (answer.trim() === '') {
+                alert('Please type an answer!');
+            } else {
+                alert('Thank you for your answer: ' + answer);
+                document.getElementById('textAnswer').value = '';
+            }
+        }
+    </script>
+</body>
+<footer>
+<a href="https://ibenderksu.github.io/index.html">
+ <h1 style="text-align: left; font-size: 20px;"><u><--home page</u></h1>
+</html>
