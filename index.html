@@ -1,139 +1,241 @@
 <!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 <head>
- <a href="https://ibenderksu.github.io/quiz.html">
- 	<h1 style="text-align: right;"><u>Quiz</u></h1>
-</a>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love in Music - Isaac Bender</title>
 <style>
-h3 {
-text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-background-color: #252b2b;
+  background-color: #252b2b;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
 }
-img {
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.quiz-link {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.quiz-link h1 {
+  color: #e4f0f0;
+  font-size: clamp(20px, 4vw, 32px);
+  display: inline-block;
+}
+
+.quiz-link a {
+  color: #e4f0f0;
+  text-decoration: none;
+}
+
+.quiz-link a:hover {
+  opacity: 0.8;
+}
+
+h1.main-title {
+  font-size: clamp(28px, 6vw, 48px);
+  color: #e4f0f0;
+  margin-bottom: 10px;
+}
+
+h2.subtitle {
+  font-size: clamp(18px, 4vw, 28px);
+  color: #e4f0f0;
+  margin-bottom: 5px;
+}
+
+h4.project-title {
+  font-size: clamp(16px, 3vw, 22px);
+  color: #e4f0f0;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: #e4f0f0;
+  line-height: 1.6;
+  padding: 0 15px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.album-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(228, 240, 240, 0.2);
+}
+
+.album-card h3 {
+  color: #e4f0f0;
+  font-size: clamp(18px, 3vw, 24px);
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.album-card a {
+  display: block;
+  text-decoration: none;
+}
+
+.album-card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   border-radius: 8px;
-  max-width: 200px;
-  max-height: 200px;
-}
-#top-right-image-container {
-	position: absolute;
-	right: 2%;
-	top: 30%;
-	tansform: translateY(-50%);
-	
-	padding: 20px;
-	border: 1px;
-}
-#top-right-image-container img{
-	max-width: 300px;
-	max-height: 300px;
-	display: block;
-}
-#top-center-image-container {
-	position: absolute;
-	left: 42%;
-	top: 30%;
-	tansform: translateY(-50%);
-	text-align: center;
-	padding: 20px;
-	border: 1px;
-}
-#top-center-image-container img{
-	max-width: 300px;
-	height: auto;
-	display: block;
-}
-#top-left-image-container{
-	position: absolute;
-	left: 2%;
-	top: 30%;
-	tansform: translateY(-50%);
-	
-	padding: 20px;
-	border: 1px;
-}
-#top-left-image-container img{
-	max-width: 300px;
-	height: auto;
-	display: block;
+  transition: opacity 0.3s ease;
 }
 
-#right-image-container{
-	position: absolute;
-	right: 20%;
-	bottom: 60px;
-	tansform: translateY(-50%);
-	
-	padding: 20px;
-	border: 1px;
-}
-#right-image-container img{
-	max-width: 300px;
-	height: auto;
-	display: block;
+.album-card img:hover {
+  opacity: 0.8;
 }
 
-#left-image-container{
-	position: absolute;
-	left: 20%;
-	bottom: 60px;
-	tansform: translateY(-50%);
-	
-	padding: 20px;
-	border: 1px;
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-#left-image-container img{
-	max-width: 300px;
-	height: auto;
-	display: block;
+
+/* Desktop - special layout for 5 items */
+@media (min-width: 1025px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .album-card:nth-child(4),
+  .album-card:nth-child(5) {
+    grid-column: span 1;
+  }
+  
+  /* Center the last row with 2 items */
+  .album-card:nth-child(4) {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  
+  .album-card:nth-child(5) {
+    margin-left: 10px;
+    margin-right: auto;
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 767px) {
+  body {
+    padding: 10px;
+  }
+  
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .intro-text {
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+  
+  .album-card {
+    padding: 15px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .quiz-link h1 {
+    font-size: 18px;
+  }
+  
+  .intro-text {
+    font-size: 14px;
+  }
 }
 </style>
-<h1 style="text-align: center; font-size: 32px; color: #e4f0f0;"> Love in Music</h1>
-<h2 style="text-align: center; font-size: 22px; color: #e4f0f0;">Isaac Bender</h2>
-<h4 style="text-align: center; font-size: 22px; color: #e4f0f0;">Intro Web Dev Project</h4>
-<p style= "text-align: center; font-size: 20px; color: #e4f0f0;">Below are 5 album covers to 5 artists whos music has changed the way I view life.
-From these 5 there are two that stand out more than the rest for me. Those being <strong>Juice WRLD</strong> and <strong>$uicideBoy$</strong>. 
-If you have any prior knowledge of these artists, you would see me as an emotionally damaged kid listening to emotionally damaged people. 
-Yet I feel normal in my walk of life, the pains these artist convey is deeply moving to me and infact I feel i benifit from hearing their messages and learning from 
-their mistakes.</p>
+</head>
 <body>
+  <header>
+    <div class="quiz-link">
+      <a href="https://ibenderksu.github.io/quiz.html">
+        <h1><u>Quiz</u></h1>
+      </a>
+    </div>
+    <h1 class="main-title">Love in Music</h1>
+    <h2 class="subtitle">Isaac Bender</h2>
+    <h4 class="project-title">Intro Web Dev Project</h4>
+    <p class="intro-text">
+      Below are 5 album covers to 5 artists whose music has changed the way I view life.
+      From these 5 there are two that stand out more than the rest for me. Those being <strong>Juice WRLD</strong> and <strong>$uicideBoy$</strong>. 
+      If you have any prior knowledge of these artists, you would see me as an emotionally damaged kid listening to emotionally damaged people. 
+      Yet I feel normal in my walk of life, the pains these artists convey is deeply moving to me and in fact I feel I benefit from hearing their messages and learning from 
+      their mistakes.
+    </p>
+  </header>
 
+  <div class="gallery">
+    <div class="album-card">
+      <h3>Juice WRLD</h3>
+      <a href="https://ibenderksu.github.io/Juice.html">
+        <img src="juice.jpg" alt="Death Race For Love album cover">
+      </a>
+    </div>
 
-<div id="left-image-container">
- <h3 style="color: #e4f0f0"><u>Post Malone</u><h3>
- <a href="https://ibenderksu.github.io/Post.html">
-  <img src="post.jpg" alt="Beer Bongs and Bentleys album cover">
- </a>
-</div>
+    <div class="album-card">
+      <h3>Trippie Redd</h3>
+      <a href="https://ibenderksu.github.io/Trippie.html">
+        <img src="loveletter3.jpg" alt="A Love Letter to You 3 album cover">
+      </a>
+    </div>
 
-<div id="right-image-container">
- <h3 style="color: #e4f0f0"><u>Bryson Tiller</u><h3>
- <a href="https://ibenderksu.github.io/BTiller.html">
-  <img src="btiller.jpg" alt="Anniversary album cover">
- </a>
-</div>
+    <div class="album-card">
+      <h3>$uicideBoy$</h3>
+      <a href="https://ibenderksu.github.io/59boys.html">
+        <img src="$uicede.jpg" alt="Long Term Effects of Suffering album cover">
+      </a>
+    </div>
 
-<div id="top-left-image-container">
- <h3 style="color: #e4f0f0"><u>Juice Wrld</u><h3>
- <a href="https://ibenderksu.github.io/Juice.html">
-  <img src="juice.jpg" alt="Death Race For Love album cover">
- </a>
-</div>
+    <div class="album-card">
+      <h3>Post Malone</h3>
+      <a href="https://ibenderksu.github.io/Post.html">
+        <img src="post.jpg" alt="Beer Bongs and Bentleys album cover">
+      </a>
+    </div>
 
-<div id="top-center-image-container">
- <h3 style="color: #e4f0f0"><u>Trippie Red</u><h3>
- <a href="https://ibenderksu.github.io/Trippie.html">
-  <img src="loveletter3.jpg" alt="A Love Letter to You 3 album cover">
- </a>
-</div>
-
-<div id="top-right-image-container">
- <h3 style="color: #e4f0f0"><u>$uicideBoy$</u><h3>
- <a href="https://ibenderksu.github.io/59boys.html">
-  <img src="$uicede.jpg" alt="Long Term Effects of Suffering album cover" height="200px" width="200px">
- </a>
-</div>
+    <div class="album-card">
+      <h3>Bryson Tiller</h3>
+      <a href="https://ibenderksu.github.io/BTiller.html">
+        <img src="btiller.jpg" alt="Anniversary album cover">
+      </a>
+    </div>
+  </div>
 </body>
 </html>
