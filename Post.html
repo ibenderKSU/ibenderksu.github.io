@@ -1,51 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post Malone - Love in Music</title>
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-background-color: #3c401e;
+  background-color: #3c401e;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
 }
+
+.back-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.back-link a {
+  color: #e4f0f0;
+  text-decoration: none;
+  font-size: clamp(16px, 3vw, 20px);
+  transition: opacity 0.3s ease;
+}
+
+.back-link a:hover {
+  opacity: 0.7;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 h1 {
-text-align: center;
-font-color: #e4f0f0;
+  color: #e4f0f0;
+  text-align: center;
+  font-size: clamp(28px, 6vw, 42px);
+  margin-bottom: 30px;
 }
+
+.album-image-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.album-image-container img {
+  max-width: 100%;
+  height: auto;
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 p {
-text-align: center;
-font-color: #e4f0f0;
+  color: #e4f0f0;
+  text-align: center;
+  font-size: clamp(16px, 2.5vw, 18px);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  padding: 0 10px;
 }
-img {
-display: block;
-margin-left: auto;
-margin-right: auto;
+
+.spacing {
+  margin-top: 30px;
 }
 
+.audio-container {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(228, 240, 240, 0.05);
+  border-radius: 12px;
+}
 
+audio {
+  width: 100%;
+  max-width: 500px;
+  outline: none;
+}
 
+audio::-webkit-media-controls-panel {
+  background-color: #2a2d17;
+}
 
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding: 30px;
+  }
+  
+  .album-image-container img {
+    width: 400px;
+  }
+}
 
+/* Mobile optimization */
+@media (max-width: 767px) {
+  body {
+    padding: 15px;
+  }
+  
+  .back-link {
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .album-image-container {
+    margin-bottom: 25px;
+  }
+  
+  .album-image-container img {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 5px;
+    margin-bottom: 15px;
+  }
+  
+  .audio-container {
+    padding: 15px;
+    margin-top: 30px;
+  }
+}
 
-
-
+/* Very small screens */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .back-link a {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  .album-image-container img {
+    max-width: 250px;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+  
+  .audio-container {
+    padding: 10px;
+  }
+}
 </style>
-<a href="https://ibenderksu.github.io/index.html">
- <h1 style="text-align: left; font-size: 20px;"><u><--home page</u></h1>
-</a>
-<h1 style="color: #e4f0f0">Post Malone</h1>
-<img src="post.jpg" alt="Beer Bongs and Bentleys album cover" height="350px" width="350px">
-<p style="color: #e4f0f0">Here lies the album cover to "Beerbongs and Bentleys". This album is important to me because it layed the foundations to the first real relationship I have had in life.</p>
-<p style="color: #e4f0f0">Released in 2018, this album connected me to my first real girlfriend. We were on a bus heading to a soccer game and we connected with each other by listening to the album on repeat the whole ride.</p>
-<p style="color: #e4f0f0"><br><br>Though the relationship did not workout, I still am thankful for the time I had with that girl. So i acredit this album to that important part of my life. When the relationship was over this songs feeling was intensified.</p>
-
 </head>
 <body>
+  <div class="content-wrapper">
+    <div class="back-link">
+      <a href="https://ibenderksu.github.io/index.html">
+        <u>&larr; home page</u>
+      </a>
+    </div>
 
-<audio controls>
-	<source src = "Paranoid.mp3" type = "audio/mpeg">
-</audio>
+    <h1>Post Malone</h1>
 
+    <div class="album-image-container">
+      <img src="post.jpg" alt="Beer Bongs and Bentleys album cover">
+    </div>
 
+    <p>Here lies the album cover to "Beerbongs and Bentleys". This album is important to me because it laid the foundations to the first real relationship I have had in life.</p>
 
+    <p>Released in 2018, this album connected me to my first real girlfriend. We were on a bus heading to a soccer game and we connected with each other by listening to the album on repeat the whole ride.</p>
 
+    <p class="spacing">Though the relationship did not work out, I still am thankful for the time I had with that girl. So I accredit this album to that important part of my life. When the relationship was over this song's feeling was intensified.</p>
 
+    <div class="audio-container">
+      <audio controls>
+        <source src="Paranoid.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
 </body>
 </html>
+
