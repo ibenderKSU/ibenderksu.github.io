@@ -1,51 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trippie Redd - Love in Music</title>
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-background-color: #434d42;
+  background-color: #434d42;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
 }
+
+.back-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.back-link a {
+  color: #e4f0f0;
+  text-decoration: none;
+  font-size: clamp(16px, 3vw, 20px);
+  transition: opacity 0.3s ease;
+}
+
+.back-link a:hover {
+  opacity: 0.7;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 h1 {
-text-align: center;
-font-color: #e4f0f0;
+  color: #e4f0f0;
+  text-align: center;
+  font-size: clamp(28px, 6vw, 42px);
+  margin-bottom: 30px;
 }
+
+.album-image-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.album-image-container img {
+  max-width: 100%;
+  height: auto;
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 p {
-text-align: center;
-font-color: #e4f0f0;
+  color: #e4f0f0;
+  text-align: center;
+  font-size: clamp(16px, 2.5vw, 18px);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  padding: 0 10px;
 }
-img {
-display: block;
-margin-left: auto;
-margin-right: auto;
+
+p strong {
+  color: #c8e0c8;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
+.spacing {
+  margin-top: 30px;
+}
 
+.audio-container {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(228, 240, 240, 0.05);
+  border-radius: 12px;
+}
 
+audio {
+  width: 100%;
+  max-width: 500px;
+  outline: none;
+}
 
+audio::-webkit-media-controls-panel {
+  background-color: #2f372f;
+}
 
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding: 30px;
+  }
+  
+  .album-image-container img {
+    width: 400px;
+  }
+}
 
+/* Mobile optimization */
+@media (max-width: 767px) {
+  body {
+    padding: 15px;
+  }
+  
+  .back-link {
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .album-image-container {
+    margin-bottom: 25px;
+  }
+  
+  .album-image-container img {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 5px;
+    margin-bottom: 15px;
+  }
+  
+  .audio-container {
+    padding: 15px;
+    margin-top: 30px;
+  }
+}
 
-
+/* Very small screens */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .back-link a {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  .album-image-container img {
+    max-width: 250px;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+  
+  .audio-container {
+    padding: 10px;
+  }
+}
 </style>
-<a href="https://ibenderksu.github.io/index.html">
- <h1 style="text-align: left; font-size: 20px;"><u><--home page</u></h1>
-</a>
-<h1 style="color: #e4f0f0">Trippie Red</h1>
-<img src="loveletter3.jpg" alt="A Love Letter to You 3 album cover" height="350px" width="350px">
-<p style="color: #e4f0f0">Trippie Red is included for a bit of a different reason. Instead of being in a emotional state while listening to music, Trippie <strong>PUTS</strong> me into an emotional state.</p>
-<p style="color: #e4f0f0">Sometimes when I am listening to music my emotions become boring. Like i'm not feeling the music. </p>
-<p style="color: #e4f0f0"><br><br>When this happens I naturally want to find a feeling. Usually, and i dont know why, but I enjoy feeling sad from a song. Almost like a self sabotage, yet it doesn't feel damning. So I thought id include him here.</p>
-
 </head>
 <body>
+  <div class="content-wrapper">
+    <div class="back-link">
+      <a href="https://ibenderksu.github.io/index.html">
+        <u>&larr; home page</u>
+      </a>
+    </div>
 
-<audio controls>
-	<source src= "TakeMeAway.mp3" type = "audio/mpeg">
-</audio>
+    <h1>Trippie Redd</h1>
 
+    <div class="album-image-container">
+      <img src="loveletter3.jpg" alt="A Love Letter to You 3 album cover">
+    </div>
 
+    <p>Trippie Redd is included for a bit of a different reason. Instead of being in an emotional state while listening to music, Trippie <strong>puts</strong> me into an emotional state.</p>
 
+    <p>Sometimes when I am listening to music my emotions become boring. Like I'm not feeling the music.</p>
 
+    <p class="spacing">When this happens I naturally want to find a feeling. Usually, and I don't know why, but I enjoy feeling sad from a song. Almost like a self sabotage, yet it doesn't feel damning. So I thought I'd include him here.</p>
 
+    <div class="audio-container">
+      <audio controls>
+        <source src="TakeMeAway.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
 </body>
 </html>
