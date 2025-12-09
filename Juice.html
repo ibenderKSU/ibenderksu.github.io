@@ -1,57 +1,222 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juice WRLD - Love in Music</title>
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-background-color: #2e222a;
+  background-color: #2e222a;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
 }
+
+.back-link {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.back-link a {
+  color: #e4f0f0;
+  text-decoration: none;
+  font-size: clamp(16px, 3vw, 20px);
+  transition: opacity 0.3s ease;
+}
+
+.back-link a:hover {
+  opacity: 0.7;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 h1 {
-text-align: center;
-font-color: #e4f0f0;
+  color: #e4f0f0;
+  text-align: center;
+  font-size: clamp(28px, 6vw, 42px);
+  margin-bottom: 30px;
 }
+
+.album-image-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.album-image-container img {
+  max-width: 100%;
+  height: auto;
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 p {
-text-align: center;
-font-color: #e4f0f0;
+  color: #e4f0f0;
+  text-align: center;
+  font-size: clamp(16px, 2.5vw, 18px);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  padding: 0 10px;
 }
-img {
-display: block;
-margin-left: auto;
-margin-right: auto;
+
+p strong {
+  color: #f0c0d0;
+  font-weight: bold;
 }
 
+.spacing {
+  margin-top: 30px;
+}
 
+.large-spacing {
+  margin-top: 40px;
+}
 
+.audio-container {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgba(228, 240, 240, 0.05);
+  border-radius: 12px;
+}
 
+audio {
+  width: 100%;
+  max-width: 500px;
+  outline: none;
+}
 
+audio::-webkit-media-controls-panel {
+  background-color: #1f161c;
+}
 
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding: 30px;
+  }
+  
+  .album-image-container img {
+    width: 400px;
+  }
+}
 
+/* Mobile optimization */
+@media (max-width: 767px) {
+  body {
+    padding: 15px;
+  }
+  
+  .back-link {
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .album-image-container {
+    margin-bottom: 25px;
+  }
+  
+  .album-image-container img {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 5px;
+    margin-bottom: 15px;
+  }
+  
+  .spacing {
+    margin-top: 20px;
+  }
+  
+  .large-spacing {
+    margin-top: 30px;
+  }
+  
+  .audio-container {
+    padding: 15px;
+    margin-top: 30px;
+  }
+}
 
+/* Very small screens */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .back-link a {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  .album-image-container img {
+    max-width: 250px;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+  
+  .audio-container {
+    padding: 10px;
+  }
+}
 </style>
-<a href="https://ibenderksu.github.io/index.html">
- <h1 style="text-align: left; font-size: 20px;"><u><--home page</u></h1>
-</a>
-<h1 style="color: #e4f0f0">Juice Wrld</h1>
-<img src="juice.jpg" alt="Death Race For Love album cover" height="350px" width="350px">
-<p style="color: #e4f0f0">The first and my favorite artists of all time is Jarad Higgins, or Juice WRLD. Since 2018 ive listening to Juice WRLD, and after his death in December 2019 nothing about that changed.</p>
-<p style="color: #e4f0f0">From the moment I heard his voice and lyrics, Jarad resognated with me. See for me as a young man growing up all I ever wanted was to be a loved husbands and father. But life does not let <strong>love</strong> come easy for everyone. </p>
-<p style="color: #e4f0f0">I felt as if love was not meant for me. This was heavy for me live with, many mental battles followed. Life at this point felt as low as it could be. What was I to look forward to if there was no love in my future?</p>
-<p style="color: #e4f0f0"><br><br>I was headed to a point of no return, until the music of Jarad was presented to me off the whim of a simple youtube algorith generating the next video it assumed id want to see.
-From this moment of discovery I began to truly learn how deep the hole can become. See Jarad did not just deal with emotions using music as an outlet, he abused opiods to the point of no return.
-<br><br>I can't speak on drug addiction personally because I dodged it, but the only reason for that was because Jarad didn't. He showed me that attempting to fill the void with drugs would never work, and he is the only reason why i never started.
-<br><br><br>There are too many songs for me to show from Jarad, so for this project I chose "Confide". An offically unreleased song, but one I believe should be heard.</p>
-
 </head>
 <body>
-<audio controls>
-	<source src = "Confide.mp3" type= "audio/mpeg">
-</audio>
+  <div class="content-wrapper">
+    <div class="back-link">
+      <a href="https://ibenderksu.github.io/index.html">
+        <u>&larr; home page</u>
+      </a>
+    </div>
 
+    <h1>Juice WRLD</h1>
 
+    <div class="album-image-container">
+      <img src="juice.jpg" alt="Death Race For Love album cover">
+    </div>
 
+    <p>The first and my favorite artist of all time is Jarad Higgins, or Juice WRLD. Since 2018 I've been listening to Juice WRLD, and after his death in December 2019 nothing about that changed.</p>
 
+    <p>From the moment I heard his voice and lyrics, Jarad resonated with me. See for me as a young man growing up all I ever wanted was to be a loved husband and father. But life does not let <strong>love</strong> come easy for everyone.</p>
 
+    <p>I felt as if love was not meant for me. This was heavy for me to live with, many mental battles followed. Life at this point felt as low as it could be. What was I to look forward to if there was no love in my future?</p>
+
+    <p class="spacing">I was headed to a point of no return, until the music of Jarad was presented to me off the whim of a simple YouTube algorithm generating the next video it assumed I'd want to see. From this moment of discovery I began to truly learn how deep the hole can become. See Jarad did not just deal with emotions using music as an outlet, he abused opioids to the point of no return.</p>
+
+    <p>I can't speak on drug addiction personally because I dodged it, but the only reason for that was because Jarad didn't. He showed me that attempting to fill the void with drugs would never work, and he is the only reason why I never started.</p>
+
+    <p class="large-spacing">There are too many songs for me to show from Jarad, so for this project I chose "Confide". An officially unreleased song, but one I believe should be heard.</p>
+
+    <div class="audio-container">
+      <audio controls>
+        <source src="Confide.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
 </body>
 </html>
+
 
